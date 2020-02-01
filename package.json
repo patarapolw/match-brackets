@@ -1,10 +1,18 @@
 {
   "name": "match-brackets",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/patarapolw/match-brackets.git",
-  "author": "Pacharapol Withayasakpunt <patarapolw@gmail.com> (https://polvcode.dev)",
   "license": "MIT",
+  "author": "Pacharapol Withayasakpunt <patarapolw@gmail.com> (https://polvcode.dev)",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc -p src/tsconfig.json",
+    "test:web": "parcel test-web/index.pug"
+  },
+  "dependencies": {
+    "escape-string-regexp": "^2.0.0"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.18.0",
     "@typescript-eslint/parser": "^2.18.0",
@@ -14,6 +22,7 @@
     "eslint-plugin-node": ">=9.1.0",
     "eslint-plugin-promise": ">=4.2.1",
     "eslint-plugin-standard": ">=4.0.0",
+    "pug": "^2.0.4",
     "typescript": "^3.7.5"
   }
 }
